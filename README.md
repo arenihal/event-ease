@@ -1,53 +1,99 @@
-﻿# Event Ease
+# Event Ease
 
-## College Event Management System
+**College Event Management System**
 
-Event Ease is a college event management application built with Next.js, TypeScript, and Firebase.
+Event Ease is a web-based college event management system developed using Next.js, React, TypeScript, and Firebase. It provides a centralized platform for students to explore and register for college events while allowing administrators to manage events and registrations efficiently.
 
-## Student Features
+## Features
 
-- Explore college events
-- View event details
-- Register for events
-- View bookings
-- Check available seats
+### Student
+- Explore upcoming college events
+- View event details and schedules
+- Register for available events
+- View registered events and bookings
+- Check event seat availability
 
-## Admin Features
-
-- Administrator authentication
-- Create and manage events
+### Administrator
+- Secure administrator authentication
+- Create, update, and manage events
 - Manage event categories
 - View student registrations
-- Monitor event bookings
+- Monitor bookings and seat availability
 
 ## Technology Stack
 
-- Next.js
-- React
-- TypeScript
-- Firebase Authentication
-- Cloud Firestore
-- Vercel
+| Component | Technology |
+|---|---|
+| Frontend | Next.js, React, TypeScript |
+| Authentication | Firebase Authentication |
+| Database | Cloud Firestore |
+| Hosting | Vercel |
+| Version Control | Git and GitHub |
+
+## Project Structure
+
+```text
+EventEase/
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   ├── package.json
+│   └── next.config.ts
+└── README.md
+```
 
 ## Getting Started
 
-1. Clone the repository.
-2. Open the frontend directory.
-3. Run `npm install`.
-4. Configure Firebase web environment variables in `.env.local`.
-5. Run `npm run dev`.
-6. Open http://localhost:3000.
+**1. Clone the repository**
+
+```bash
+git clone <repository-url>
+```
+
+**2. Navigate to the frontend**
+
+```bash
+cd EventEase/frontend
+```
+
+**3. Install dependencies**
+
+```bash
+npm install
+```
+
+**4. Configure Firebase**
+
+Create a `.env.local` file inside the frontend directory and configure the required Firebase environment variables.
+
+**5. Start the development server**
+
+```bash
+npm run dev
+```
+
+**6. Open the application**
+
+Visit http://localhost:3000.
 
 ## Deployment
 
-Deploy the Next.js application to Vercel using `frontend` as the Root Directory.
+The application is designed for deployment on Vercel.
 
-Configure the Firebase environment variables in Vercel before deploying.
+- Connect the GitHub repository to Vercel.
+- Set `frontend` as the Root Directory.
+- Configure Firebase environment variables.
+- Deploy the application.
 
 ## Security
 
-Never commit Firebase service-account credentials, private keys, or `.env.local` files.
+- Use Firebase Authentication for user authentication.
+- Configure Firestore Security Rules to restrict unauthorized access.
+- Protect administrator operations using verified permissions.
+- Never commit private keys, service-account credentials, or `.env.local` files.
 
 ## Project Status
 
-Under active development.
+**Under Active Development**
+
+Event Ease is being developed to simplify college event organization, student registration, and event management.
