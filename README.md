@@ -1,24 +1,39 @@
 # Event Ease
 
-**College Event Management System**
+### College Event Management System
 
-Event Ease is a web-based college event management system developed using Next.js, React, TypeScript, and Firebase. It provides a centralized platform for students to explore and register for college events while allowing administrators to manage events and registrations efficiently.
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/React-149ECA?style=for-the-badge&logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-DD2C00?style=for-the-badge&logo=firebase&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+
+## Project Overview
+
+**Event Ease** is a web-based College Event Management System developed using Next.js, React, TypeScript, and Firebase.
+
+The platform simplifies college event organization by allowing students to explore upcoming events, register for activities, and track bookings.
+
+Administrators can create events, manage registrations, organize categories, and monitor seat availability through a centralized management system.
 
 ## Features
 
-### Student
+### Student Features
+
 - Explore upcoming college events
 - View event details and schedules
 - Register for available events
 - View registered events and bookings
 - Check event seat availability
 
-### Administrator
+### Administrator Features
+
 - Secure administrator authentication
 - Create, update, and manage events
 - Manage event categories
 - View student registrations
-- Monitor bookings and seat availability
+- Monitor event bookings
+- Track available seats
 
 ## Technology Stack
 
@@ -33,7 +48,7 @@ Event Ease is a web-based college event management system developed using Next.j
 ## Project Structure
 
 ```text
-EventEase/
+event-ease/
 ├── frontend/
 │   ├── src/
 │   ├── public/
@@ -42,58 +57,84 @@ EventEase/
 └── README.md
 ```
 
+*The structure above is illustrative and should be checked against the repository.*
+
 ## Getting Started
 
-**1. Clone the repository**
+### 1. Clone the Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/arenihal/event-ease.git
 ```
 
-**2. Navigate to the frontend**
+### 2. Navigate to the Frontend
 
 ```bash
-cd EventEase/frontend
+cd event-ease/frontend
 ```
 
-**3. Install dependencies**
+### 3. Install Dependencies
 
 ```bash
 npm install
 ```
 
-**4. Configure Firebase**
+### 4. Configure Firebase
 
-Create a `.env.local` file inside the frontend directory and configure the required Firebase environment variables.
+Create a `.env.local` file inside the `frontend` directory.
 
-**5. Start the development server**
+Add the Firebase web configuration environment variables required by the application.
+
+Never add private credentials to this file or commit it to GitHub.
+
+### 5. Run the Development Server
 
 ```bash
 npm run dev
 ```
 
-**6. Open the application**
+### 6. Open the Application
 
-Visit http://localhost:3000.
+Visit:
+
+http://localhost:3000
 
 ## Deployment
 
-The application is designed for deployment on Vercel.
+The application is designed for deployment on **Vercel**.
 
-- Connect the GitHub repository to Vercel.
-- Set `frontend` as the Root Directory.
-- Configure Firebase environment variables.
-- Deploy the application.
+1. Connect the GitHub repository to Vercel.
+2. Select the Event Ease repository.
+3. Configure `frontend` as the Root Directory.
+4. Add the required Firebase environment variables.
+5. Deploy the application.
 
 ## Security
 
-- Use Firebase Authentication for user authentication.
-- Configure Firestore Security Rules to restrict unauthorized access.
-- Protect administrator operations using verified permissions.
-- Never commit private keys, service-account credentials, or `.env.local` files.
+- Firebase Authentication for user authentication
+- Firestore Security Rules for database access control
+- Verified administrator permissions for privileged operations
+- Environment variables for application configuration
+- No private keys or service-account credentials committed to GitHub
+
+## Future Enhancements
+
+- Event search and filtering
+- Registration confirmation notifications
+- QR-based event check-in
+- Event attendance tracking
+- Administrator analytics dashboard
 
 ## Project Status
 
 **Under Active Development**
 
 Event Ease is being developed to simplify college event organization, student registration, and event management.
+
+## Repository
+
+[Event Ease – GitHub](https://github.com/arenihal/event-ease)
+
+---
+
+**Built with Next.js, React, TypeScript, and Firebase.**
