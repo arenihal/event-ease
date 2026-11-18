@@ -19,32 +19,6 @@ function EventBookingContent() {
   const [event, setEvent] = useState<EventData | null>(null);
   const [loading, setLoading] = useState(true);
   const [busy, setBusy] = useState(false);
-  // EVENTEASE_AUTH_DIAGNOSTIC
-  const [authDiagnostic, setAuthDiagnostic] = useState("Checking Firebase authentication...");
-
-  useEffect(() => {
-    return onAuthStateChanged(auth, async (current) => {
-      if (!current) {
-        setAuthDiagnostic("No user logged in");
-        return;
-      }
-
-      try {
-        const token = await current.getIdTokenResult(true);
-
-        setAuthDiagnostic(JSON.stringify({
-          projectId: auth.app.options.projectId,
-          uid: current.uid,
-          adminClaim: token.claims.admin ?? false,
-          tokenProject: token.claims.aud
-        }, null, 2));
-      } catch (error) {
-        setAuthDiagnostic(
-          error instanceof Error ? error.message : "Authentication check failed"
-        );
-      }
-    });
-  }, []);
 
   const [error, setError] = useState("");
 
@@ -97,10 +71,6 @@ function EventBookingContent() {
 
   const available = event ? Math.max(0, event.seats - event.bookedCount) : 0;
   return <main className="min-h-screen bg-[#f8f9fd] text-slate-900"><Sidebar />
-<aside className="fixed bottom-4 right-4 z-50 max-w-sm rounded-xl border border-purple-300 bg-white p-4 text-xs text-black shadow-xl">
-  <strong>Event Ease Firebase Diagnostic</strong>
-  <pre className="mt-2 whitespace-pre-wrap">{authDiagnostic}</pre>
-</aside>
     <div className="mx-auto max-w-3xl px-6 py-12 lg:ml-64">
       <Link href="/#events" className="text-violet-700 underline">Back to Events</Link>
       {loading ? <p className="mt-8">Loading event...</p> : event ? <article className="mt-6 rounded-3xl bg-white p-8 shadow-sm">
