@@ -53,6 +53,11 @@ function EventBookingContent() {
       const bookingRef = doc(db, "bookings", `${eventId}_${user.uid}`);
       await runTransaction(db, async (transaction) => {
         const eventDoc = await transaction.get(eventRef);
+        const existingBooking = await transaction.get(bookingRef);
+
+        if (existingBooking.exists()) {
+          throw new Error("You have already booked this event.");
+        }
 
         if (!eventDoc.exists() || eventDoc.data().status !== "published") throw new Error("Event unavailable.");
 
