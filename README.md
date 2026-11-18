@@ -1,140 +1,72 @@
-# Event Ease
+# Event Ease — College Event Management System
 
-### College Event Management System
+![Next.js](https://img.shields.io/badge/Next.js-black?logo=nextdotjs) ![React](https://img.shields.io/badge/React-149ECA?logo=react&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white) ![Firebase](https://img.shields.io/badge/Firebase-DD2C00?logo=firebase&logoColor=white) ![Vercel](https://img.shields.io/badge/Vercel-black?logo=vercel)
 
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![React](https://img.shields.io/badge/React-149ECA?style=for-the-badge&logo=react&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-DD2C00?style=for-the-badge&logo=firebase&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+**[Live Website](https://eventease-web-sooty.vercel.app/explore-events)** · **[GitHub Repository](https://github.com/arenihal/event-ease)**
 
-## Project Overview
-
-**Event Ease** is a web-based College Event Management System developed using Next.js, React, TypeScript, and Firebase.
-
-The platform simplifies college event organization by allowing students to explore upcoming events, register for activities, and track bookings.
-
-Administrators can create events, manage registrations, organize categories, and monitor seat availability through a centralized management system.
+Event Ease is a college event management web application built with Next.js, React, TypeScript, and Firebase. Students can discover events, view details, register, and manage bookings. Administrators can manage events and monitor registrations.
 
 ## Features
 
-### Student Features
+**Student:** Explore events, search and filter by category, view event details and seat availability, book events, view or cancel bookings, and manage profile settings.
 
-- Explore upcoming college events
-- View event details and schedules
-- Register for available events
-- View registered events and bookings
-- Check event seat availability
+**Administrator:** Sign in to an administrator dashboard, create and manage events and categories, monitor bookings and registered students, and review event seat availability.
 
-### Administrator Features
+## Screenshots
 
-- Secure administrator authentication
-- Create, update, and manage events
-- Manage event categories
-- View student registrations
-- Monitor event bookings
-- Track available seats
+### Student Login
+![Student Login](screenshots/login-page.png)
+
+### Student Dashboard
+![Student Dashboard](screenshots/student-dashboard.png)
+
+### Explore Events
+![Explore Events](screenshots/explore-events.png)
+
+### Event Details
+![Event Details](screenshots/event-details.png)
+
+### My Bookings
+![My Bookings](screenshots/my-bookings.png)
+
+### Student Profile
+![Student Profile](screenshots/student-profile.png)
+
+### Admin Dashboard
+![Admin Dashboard](screenshots/admin-dashboard.png)
+
+### Manage Events
+![Manage Events](screenshots/manage-events.png)
 
 ## Technology Stack
 
-| Component | Technology |
-|---|---|
+| Area | Technology |
+| --- | --- |
 | Frontend | Next.js, React, TypeScript |
 | Authentication | Firebase Authentication |
 | Database | Cloud Firestore |
-| Hosting | Vercel |
+| Deployment | Vercel |
 | Version Control | Git and GitHub |
-
-## Project Structure
-
-```text
-event-ease/
-├── frontend/
-│   ├── src/
-│   ├── public/
-│   ├── package.json
-│   └── next.config.ts
-└── README.md
-```
-
-*The structure above is illustrative and should be checked against the repository.*
 
 ## Getting Started
 
-### 1. Clone the Repository
-
 ```bash
 git clone https://github.com/arenihal/event-ease.git
-```
-
-### 2. Navigate to the Frontend
-
-```bash
 cd event-ease/frontend
-```
-
-### 3. Install Dependencies
-
-```bash
 npm install
-```
-
-### 4. Configure Firebase
-
-Create a `.env.local` file inside the `frontend` directory.
-
-Add the Firebase web configuration environment variables required by the application.
-
-Never add private credentials to this file or commit it to GitHub.
-
-### 5. Run the Development Server
-
-```bash
 npm run dev
 ```
 
-### 6. Open the Application
-
-Visit:
-
-http://localhost:3000
+Configure the Firebase web environment variables in `frontend/.env.local` before starting the app. Open http://localhost:3000.
 
 ## Deployment
 
-The application is designed for deployment on **Vercel**.
-
-1. Connect the GitHub repository to Vercel.
-2. Select the Event Ease repository.
-3. Configure `frontend` as the Root Directory.
-4. Add the required Firebase environment variables.
-5. Deploy the application.
+Deploy to Vercel using `frontend` as the Root Directory, and configure the required Firebase environment variables in the Vercel project settings.
 
 ## Security
 
-- Firebase Authentication for user authentication
-- Firestore Security Rules for database access control
-- Verified administrator permissions for privileged operations
-- Environment variables for application configuration
-- No private keys or service-account credentials committed to GitHub
-
-## Future Enhancements
-
-- Event search and filtering
-- Registration confirmation notifications
-- QR-based event check-in
-- Event attendance tracking
-- Administrator analytics dashboard
+Protect privileged administrator actions using verified authorization and Firestore Security Rules. Never commit service-account credentials, private keys, or `.env.local` files.
 
 ## Project Status
 
-**Under Active Development**
-
-Event Ease is being developed to simplify college event organization, student registration, and event management.
-
-## Repository
-
-[Event Ease – GitHub](https://github.com/arenihal/event-ease)
-
----
-
-**Built with Next.js, React, TypeScript, and Firebase.**
+Under active development.
